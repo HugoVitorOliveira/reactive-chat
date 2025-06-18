@@ -1,0 +1,14 @@
+services:
+  database:
+    image: postgres
+    container_name: reactivechat
+    environment:
+      POSTGRES_PASSWORD: reactivechat
+      POSTGRES_USER: reactivechat
+      POSTGRES_DB: reactivechat
+    ports:
+      - "5432:5432"
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"

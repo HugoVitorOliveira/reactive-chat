@@ -1,0 +1,40 @@
+quarkus:
+  application:
+    name: ReactiveChat
+  http:
+    port: 9090
+    root-path: /api
+    cors:
+      ~: true
+      origins: /.*/
+      methods: POST,GET,OPTIONS,PUT,DELETE
+      headers: Origin,X-Requested-With,Content-Type,Authorization,Accept,schema
+    auth:
+      permission:
+        status:
+          paths: /api/status/*, /api/metrics/*, /api/openapi/*, /api/swagger-ui/*
+          policy: permit
+        secured:
+          paths: /api/*
+          policy: authenticated
+    smallrye-health:
+      root-path: /api/status
+    smallrye-openapi:
+      path: /api/openapi
+    swagger-ui:
+      path: /api/swagger-ui
+    smallrye-jwt:
+      auth-mechanism: MP-JWT
+      enabled: true
+  datasource:
+    db-kind: ${datasource.kind}
+    jdbc:
+      url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+
+app:
+  jwt:
+    issuer: ${jwt.issuer}
+    secret: ${jwt.secret}
+

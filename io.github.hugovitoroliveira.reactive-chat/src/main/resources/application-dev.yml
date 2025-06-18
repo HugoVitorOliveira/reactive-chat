@@ -1,0 +1,11 @@
+datasource:
+  kind: postgresql
+  generation: none
+  url: jdbc:postgresql://localhost:5432/reactivechat
+  username: reactivechat
+  password: reactivechat
+  migrate-at-start: false
+  log-sql: true
+jwt:
+  issuer: nexuscloud
+  secret: c10438692b9043e3b681be5963d95320
