@@ -60,10 +60,10 @@ Este projeto é uma API de chat moderna e reativa, desenvolvida com **Quarkus**,
 ## 📌 Quebra de Tarefas (Roadmap)
 
 ### 🏁 Fase 1 — Setup Inicial e Autenticação
-- [ ] Criar projeto base com extensões Quarkus necessárias.
-- [ ] Configurar PostgreSQL e MongoDB (preferencialmente via Docker).
-- [ ] Implementar endpoints de registro, login e autenticação JWT.
-- [ ] Criar entidade de usuário (PostgreSQL reativo).
+- [x] Criar projeto base com extensões Quarkus necessárias.
+- [x] Configurar PostgreSQL e MongoDB (preferencialmente via Docker).
+- [x] Implementar endpoints de registro, login e autenticação JWT.
+- [x] Criar entidade de usuário (PostgreSQL reativo).
 - [ ] Implementar testes unitários da autenticação.
 
 ### 📲 Fase 2 — Contatos e Salas de Chat
