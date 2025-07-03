@@ -7,7 +7,7 @@ import shared.services.encrypt.CryptoStrategy;
  * @author Hugo Vitor de Oliveira Moura <hugo.moura@nexuscloud.com.br>
  * @since 13/06/25
  */
-@AesQualifier
+@Aes
 @RequestScoped
 public class AesCrypto implements CryptoStrategy {
 
